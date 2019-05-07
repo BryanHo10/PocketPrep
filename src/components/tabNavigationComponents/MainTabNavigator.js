@@ -22,13 +22,14 @@ const CalendarStack = createSwitchNavigator({
 });
 
 CalendarStack.navigationOptions = {
- tabBarLabel: 'Calendar',
+  tabBarLabel: 'Calendar',
 
-	tabBarIcon: ({ focused }) => (
+  tabBarIcon: ({ focused }) => (
     <FontAwesome
       focused={focused}
       name={"calendar"}
-      size = {26}
+      size={26}
+      color={focused === false ? 'black' : '#337af7'}
     />
   ),
 };
@@ -43,43 +44,45 @@ ShoppingStack.navigationOptions = {
   tabBarLabel: 'Shopping List',
   tabBarIcon: ({ focused }) => (
     <FontAwesome
-      focused={focused}
       name={'shopping-cart'}
-      size = {26}
+      size={26}
+      color={focused === false ? 'black' : '#337af7'}
     />
-  ),
+  )
 };
 
 const MealStack = createSwitchNavigator({
-    Meals: MealListScreen,
+  Meals: MealListScreen,
 });
 
 const resetMealView = StackActions.reset({
-	index: 0,
-	actions: [NavigationActions.navigate({routeName: 'Main'})],
+  index: 0,
+  actions: [NavigationActions.navigate({ routeName: 'Main' })],
 });
 
 MealStack.navigationOptions = {
-    tabBarLabel: 'Meals',
-    tabBarIcon: ({focused}) => (
-        <FontAwesome focused = {focused}
-        name={'cutlery'}
-        size={26}
-        />
-    ),
-	
-	tabBarOnPress: ({ navigation, defaultHandler }) => {
-		if(navigation.getParam('resetCustom', false) == true){
-			//Set the resetCustom flag in MealStack to false
-			navigation.setParams({resetCustom: false});
-			//Reset Stack
-			navigation.dispatch(resetMealView);
-			//navigates to Meal Tab
-			defaultHandler();
-		}
-		else
-			defaultHandler();
-	}
+  tabBarLabel: 'Recipes',
+  tabBarIcon: ({ focused }) => (
+    <FontAwesome
+      focused={focused}
+      name={'cutlery'}
+      size={26}
+      color={focused === false ? 'black' : '#337af7'}
+    />
+  ),
+
+  tabBarOnPress: ({ navigation, defaultHandler }) => {
+    if (navigation.getParam('resetCustom', false) == true) {
+      //Set the resetCustom flag in MealStack to false
+      navigation.setParams({ resetCustom: false });
+      //Reset Stack
+      navigation.dispatch(resetMealView);
+      //navigates to Meal Tab
+      defaultHandler();
+    }
+    else
+      defaultHandler();
+  }
 }
 
 const SettingStack = createSwitchNavigator({
@@ -88,11 +91,12 @@ const SettingStack = createSwitchNavigator({
 
 SettingStack.navigationOptions = {
   tabBarLabel: 'Settings',
-  tabBarIcon: ({focused}) => (
-      <FontAwesome focused = {focused}
+  tabBarIcon: ({ focused }) => (
+    <FontAwesome
       name={'cogs'}
       size={26}
-      />
+      color={focused === false ? 'black' : '#337af7'}
+    />
   )
 }
 
