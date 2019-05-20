@@ -4,9 +4,15 @@
 
 This mobile application implements the [React-Native](https://github.com/facebook/react-native) framework.
 
-```
-npm start
-```
+## Developers
+* [Mark Johnston](https://github.com/markj19) 
+* [Dayton Schuh](https://github.com/daytonschuh)
+* [Michael Housworth](https://github.com/mhousworth)
+* [Bryan Ho](https://github.com/BryanHo10)
+## Benefits
+
+- App will prevent people from making impulsive unhealthy decisions 
+- Encourage people to experiment different meals
 
 ## Features
 
@@ -16,10 +22,6 @@ npm start
 - Option to create and save personal recipes
 - Compile a shopping list based on start and end date given by user
 
-## Benefits
-
-- App will prevent people from making impulsive unhealthy decisions 
-- Encourage people to experiment different meals
 
 ## Future Considerations
 
@@ -27,3 +29,17 @@ npm start
 - Calorie & Nutrition Tracker/Calculator
 - Share meal plans
 - Tooltip/Tutorial
+
+## Installation
+Use the package manager [npm](https://nodejs.org/en/download/) to install PocketPrep dependencies.
+
+```bash
+npm install
+```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
